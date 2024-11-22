@@ -7,6 +7,8 @@
   background-color: #fff;
   border-radius: 3.6rem;
   box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
+  /* display: none; */
 }
 
 .img-min {
@@ -64,15 +66,14 @@ input {
   margin-bottom: 2.4rem;
   font-size: 1.6rem;
   position: relative;
+  padding-left: 2.4rem;
   border: 1px solid var(--grey-25, rgba(25, 24, 43, 0.25));
 }
 
 ::placeholder {
   color: var(--Dark-Navy, #242742);
-
   font-size: 1.6rem;
   font-weight: 400;
-  padding-left: 2.4rem;
   opacity: 0.5;
 }
 
@@ -80,7 +81,7 @@ input:hover::placeholder {
   opacity: 1;
 }
 
-button {
+form button {
   color: var(--White, #fff);
   border-radius: 0.8rem;
   padding: 1.5rem 6.4rem;
@@ -91,8 +92,66 @@ button {
   border: none;
 }
 
-button:hover,
-button:active {
+form button:hover,
+form button:active {
+  background: var(
+    --Gradient-1,
+    linear-gradient(204deg, #ff6a3a 0%, #ff527b 100%)
+  );
+  box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+}
+
+/* Thank you MM */
+
+.thank-you {
+  width: 50.4rem;
+  border-radius: 3.6rem;
+  background: #fff;
+  box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
+  padding-left: 6.4rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.thank-you img {
+  margin: 4.8rem 0 4rem 0;
+  display: inline-block;
+}
+
+.thank-you h2 {
+  color: var(--Dark-Navy, #242742);
+
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 2.4rem;
+}
+
+.thank-you p {
+  color: var(--Dark-Navy, #242742);
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 4rem;
+}
+
+.thank-you button {
+  color: var(--White, #fff);
+  border-radius: 0.8rem;
+  padding: 1.5rem 11.8rem;
+  background-color: #242742;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 6.4rem;
+}
+
+.thank-you button:hover {
   background: var(
     --Gradient-1,
     linear-gradient(204deg, #ff6a3a 0%, #ff527b 100%)
@@ -101,23 +160,22 @@ button:active {
 }
 
 /* Javascript */
-
-/* ::placeholder {
+/* 
+::placeholder {
   color: var(--Vermellion, #ff6155);
   opacity: 1;
 }
 
-input {
+.js-input {
   border: 1px solid var(--Vermellion, #ff6155);
   outline: none;
-} 
-
-*/
+  display: ;
+}
 
 span {
   color: #ff6155;
-  display: none;
-}
+  display: block;
+} */
 
 .valid-email {
   display: flex;
@@ -128,6 +186,13 @@ span {
   margin: 3rem 0 0.8rem 0;
 }
 
+.hide {
+  display: none;
+}
+
+.error {
+  border-color: red;
+}
 /* ******************* */
 /* Responsive */
 /* ******************* */
@@ -142,11 +207,6 @@ span {
   .img-min {
     padding: 0;
     width: 100%;
-
-    background-image: url('./assets/images/illustration-sign-up-mobile.svg'); /* Replace with your image path */
-    background-size: cover; /* Makes the image cover the entire container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
   }
   .hero-text h1 {
     font-size: 4rem;

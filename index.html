@@ -9,7 +9,7 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="container">
+    <section class="container" id="from-container">
       <div class="hero-text">
         <h1>Stay updated!</h1>
         <p>
@@ -47,8 +47,15 @@
             <div><span>Valid email required</span></div>
           </div>
 
-          <input type="email" placeholder="email@company.com" required /> <br />
-          <button>Subscribe to monthly newsletter</button>
+          <input
+            class="input js-input"
+            id="input"
+            type="email"
+            placeholder="email@company.com"
+            required
+          />
+          <br />
+          <button id="btn-input">Subscribe to monthly newsletter</button>
         </form>
       </div>
 
@@ -64,6 +71,18 @@
           <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
         </picture>
       </div>
+    </section>
+
+    <section class="thank-you hide">
+      <img src="./assets/images/icon-success.svg" alt="" />
+      <h2>Thanks for subscribing!</h2>
+      <p>
+        A confirmation email has been sent to <br />
+        ash@loremcompany.com. Please open it and click <br />
+        the button inside to confirm your subscription.
+      </p>
+
+      <button id="btn-dismiss">Dismiss message</button>
     </section>
   </body>
 </html>
